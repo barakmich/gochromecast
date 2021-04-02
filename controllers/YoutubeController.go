@@ -6,10 +6,10 @@ import (
 	"log"
 	"time"
 
-	"github.com/AndreasAbdi/gochromecast/controllers/youtube"
+	"github.com/barakmich/gochromecast/controllers/youtube"
 
-	"github.com/AndreasAbdi/gochromecast/api"
-	"github.com/AndreasAbdi/gochromecast/primitives"
+	"github.com/barakmich/gochromecast/api"
+	"github.com/barakmich/gochromecast/primitives"
 )
 
 /*

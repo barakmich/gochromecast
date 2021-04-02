@@ -16,7 +16,7 @@ type MediaDataBuilder interface {
 type standardMediaDataBuilder struct {
 	contentID   string
 	contentType string
-	streamType  string
+	StreamType  string
 	duration    *float64
 	customData  map[string]interface{}
 }
@@ -30,11 +30,11 @@ func (builder *standardMediaDataBuilder) SetContentType(contentType contentType)
 	builder.contentType = string(contentType)
 }
 
-//SetStreamType sets the streamType field
-func (builder *standardMediaDataBuilder) SetStreamType(sType streamType) {
+//SetStreamType sets the StreamType field
+func (builder *standardMediaDataBuilder) SetStreamType(sType StreamType) {
 	switch sType {
 	case NoneStreamType, BufferedStreamType, LiveStreamType:
-		builder.streamType = string(sType)
+		builder.StreamType = string(sType)
 	}
 }
 
@@ -53,7 +53,7 @@ func (builder *standardMediaDataBuilder) Build() (MediaData, error) {
 	return MediaData{
 		builder.contentID,
 		builder.contentType,
-		builder.streamType,
+		builder.StreamType,
 		builder.duration,
 		nil,
 		builder.customData,

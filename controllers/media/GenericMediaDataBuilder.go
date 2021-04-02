@@ -25,7 +25,7 @@ type genericMediaDataBuilder struct {
 }
 
 //NewGenericMediaDataBuilder is a constructor for the media data builder class
-func NewGenericMediaDataBuilder(contentID contentID, contentType contentType, sType streamType) (genericMediaDataBuilder, error) {
+func NewGenericMediaDataBuilder(contentID contentID, contentType contentType, sType StreamType) (genericMediaDataBuilder, error) {
 	builder := genericMediaDataBuilder{}
 	builder.SetContentID(contentID)
 	builder.SetContentType(contentType)
@@ -82,7 +82,7 @@ func (builder *genericMediaDataBuilder) Build() (MediaData, error) {
 	return MediaData{
 		builder.contentID,
 		builder.contentType,
-		builder.streamType,
+		builder.StreamType,
 		builder.duration,
 		structs.Map(metadata),
 		builder.customData,

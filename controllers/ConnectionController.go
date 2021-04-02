@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"github.com/AndreasAbdi/gochromecast/primitives"
+	"github.com/barakmich/gochromecast/primitives"
 )
 
 //ConnectionController is for basic connect and close caommands connection to a chromecast

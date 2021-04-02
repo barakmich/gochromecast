@@ -89,7 +89,7 @@ func (builder *PhotoTrackMediaDataBuilder) Build() (MediaData, error) {
 	return MediaData{
 		ContentID:   builder.contentID,
 		ContentType: builder.contentType,
-		StreamType:  builder.streamType,
+		StreamType:  builder.StreamType,
 		Duration:    builder.duration,
 		Metadata:    structs.Map(metadata),
 		CustomData:  builder.customData,

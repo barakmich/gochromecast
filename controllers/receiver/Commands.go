@@ -1,6 +1,6 @@
 package receiver
 
-import "github.com/AndreasAbdi/gochromecast/primitives"
+import "github.com/barakmich/gochromecast/primitives"
 
 //LaunchRequest is a command to the receiver controller namespace to launch an application.
 type LaunchRequest struct {

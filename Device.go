@@ -4,11 +4,11 @@ import (
 	"net"
 	"time"
 
-	"github.com/AndreasAbdi/gochromecast/configs"
-	"github.com/AndreasAbdi/gochromecast/controllers"
-	"github.com/AndreasAbdi/gochromecast/controllers/media"
-	"github.com/AndreasAbdi/gochromecast/controllers/receiver"
-	"github.com/AndreasAbdi/gochromecast/primitives"
+	"github.com/barakmich/gochromecast/configs"
+	"github.com/barakmich/gochromecast/controllers"
+	"github.com/barakmich/gochromecast/controllers/media"
+	"github.com/barakmich/gochromecast/controllers/receiver"
+	"github.com/barakmich/gochromecast/primitives"
 )
 
 const defaultTimeout = time.Second * 10
@@ -53,10 +53,10 @@ func (device *Device) Play() {
 }
 
 //PlayMedia plays a video via the media controller.
-func (device *Device) PlayMedia(URL string, MIMEType string) {
+func (device *Device) PlayMedia(URL string, MIMEType string, streamType string) {
 	appID := configs.MediaReceiverAppID
 	device.ReceiverController.LaunchApplication(&appID, defaultTimeout, false)
-	device.MediaController.Load(URL, MIMEType, defaultTimeout)
+	device.MediaController.Load(URL, MIMEType, streamType, defaultTimeout)
 }
 
 //QuitApplication that is currently running on the device

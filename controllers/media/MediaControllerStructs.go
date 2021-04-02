@@ -1,6 +1,6 @@
 package media
 
-import "github.com/AndreasAbdi/gochromecast/primitives"
+import "github.com/barakmich/gochromecast/primitives"
 
 type MediaCommand struct {
 	primitives.PayloadHeaders
@@ -23,16 +23,16 @@ type LoadCommand struct {
 //Generic enum type for media data
 
 //StreamType is a type for media data defining what type of stream the data is supposed to be.
-type streamType string
+type StreamType string
 
 //NoneStreamType is for when you don't want to define a stream type.
-const NoneStreamType streamType = "NONE"
+const NoneStreamType StreamType = "NONE"
 
 //BufferedStreamType is for a stream that should be buffered/loaded.
-const BufferedStreamType streamType = "BUFFERED"
+const BufferedStreamType StreamType = "BUFFERED"
 
 //LiveStreamType is for videos that are livestreaming. (Twitch/Youtube livestreams, etc)
-const LiveStreamType streamType = "LIVE"
+const LiveStreamType StreamType = "LIVE"
 
 //MediaData is data format for message to send to chromecast to play a (vid/image/tvshow/music video/etc) via generic media player.
 //https://developers.google.com/cast/docs/reference/messages#MediaData is the general info.
@@ -42,7 +42,7 @@ type MediaData struct {
 	//ContentType is the MIME type of the media
 	ContentID   string                 `json:"contentId"`
 	ContentType string                 `json:"contentType"` //data MIME
-	StreamType  string                 `json:"streamType"`  // (NONE, BUFFERED, or LIVE)
+	StreamType  string                 `json:"StreamType"`  // (NONE, BUFFERED, or LIVE)
 	Duration    *float64               `json:"duration,omitempty"`
 	Metadata    map[string]interface{} `json:"metadata,omitempty"` //stores a mediadata
 	CustomData  map[string]interface{} `json:"customData,omitempty"`

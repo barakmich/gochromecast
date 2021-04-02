@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/AndreasAbdi/gochromecast/generic"
+	"github.com/barakmich/gochromecast/generic"
 	"github.com/imroc/req"
 )
 

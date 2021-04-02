@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/AndreasAbdi/gochromecast/api"
-	"github.com/AndreasAbdi/gochromecast/generic"
+	"github.com/barakmich/gochromecast/api"
+	"github.com/barakmich/gochromecast/generic"
 )
 
 //Channel is an abstraction over a chromecast channel.

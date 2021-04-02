@@ -1,6 +1,6 @@
 package receiver
 
-import "github.com/AndreasAbdi/gochromecast/primitives"
+import "github.com/barakmich/gochromecast/primitives"
 
 //StatusResponse is the main wrapper around a receiver status
 type StatusResponse struct {

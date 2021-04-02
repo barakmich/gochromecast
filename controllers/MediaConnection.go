@@ -4,10 +4,10 @@ import (
 	"errors"
 	"time"
 
-	"github.com/AndreasAbdi/gochromecast/controllers/receiver"
+	"github.com/barakmich/gochromecast/controllers/receiver"
 
-	"github.com/AndreasAbdi/gochromecast/api"
-	"github.com/AndreasAbdi/gochromecast/primitives"
+	"github.com/barakmich/gochromecast/api"
+	"github.com/barakmich/gochromecast/primitives"
 )
 
 type listener struct {

@@ -8,9 +8,9 @@ import (
 
 	"github.com/imdario/mergo"
 
-	"github.com/AndreasAbdi/gochromecast/api"
-	"github.com/AndreasAbdi/gochromecast/controllers/media"
-	"github.com/AndreasAbdi/gochromecast/primitives"
+	"github.com/barakmich/gochromecast/api"
+	"github.com/barakmich/gochromecast/controllers/media"
+	"github.com/barakmich/gochromecast/primitives"
 )
 
 /*
@@ -81,11 +81,11 @@ func (c *MediaController) GetStatus(timeout time.Duration) ([]*media.MediaStatus
 }
 
 //Load sends a load request to play a generic media event
-func (c *MediaController) Load(url string, contentTypeString string, timeout time.Duration) (*api.CastMessage, error) {
+func (c *MediaController) Load(url string, contentTypeString string, streamType string, timeout time.Duration) (*api.CastMessage, error) {
 	//TODO should do something about messaging with the contenttype, so it works with different media types. so we can attach more metadata
 	//TODO also should be sending a message of type media data( should probably actually construct the request)
 	//c.GetStatus(defaultTimeout)
-	mediaData, err := c.constructMediaData(url, contentTypeString)
+	mediaData, err := c.constructMediaData(url, contentTypeString, streamType)
 	if err != nil {
 		return nil, err
 	}
@@ -178,7 +178,7 @@ func (c *MediaController) DisableSubtitles(timeout time.Duration) (*api.CastMess
 	return nil, nil
 }
 
-func (c *MediaController) constructMediaData(url string, contentTypeString string) (*media.MediaData, error) {
+func (c *MediaController) constructMediaData(url string, contentTypeString string, streamType string) (*media.MediaData, error) {
 	contentType, err := media.NewContentType(contentTypeString)
 	if err != nil {
 		return nil, err
@@ -187,7 +187,7 @@ func (c *MediaController) constructMediaData(url string, contentTypeString strin
 	if err != nil {
 		return nil, err
 	}
-	builder, err := media.NewGenericMediaDataBuilder(contentID, contentType, media.NoneStreamType)
+	builder, err := media.NewGenericMediaDataBuilder(contentID, contentType, media.StreamType(streamType))
 	if err != nil {
 		return nil, err
 	}

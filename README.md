@@ -1,9 +1,9 @@
 
 # gochromecast
 
-[![GoDoc](https://godoc.org/github.com/AndreasAbdi/gochromecast?status.png)](http://godoc.org/github.com/AndreasAbdi/gochromecast)
-[![Go Report Card](https://goreportcard.com/badge/github.com/AndreasAbdi/gochromecast)](https://goreportcard.com/report/github.com/AndreasAbdi/gochromecast)
-[![Build Status](https://travis-ci.org/AndreasAbdi/gochromecast.svg?branch=master)](https://travis-ci.org/AndreasAbdi/gochromecast)
+[![GoDoc](https://godoc.org/github.com/barakmich/gochromecast?status.png)](http://godoc.org/github.com/barakmich/gochromecast)
+[![Go Report Card](https://goreportcard.com/badge/github.com/barakmich/gochromecast)](https://goreportcard.com/report/github.com/barakmich/gochromecast)
+[![Build Status](https://travis-ci.org/barakmich/gochromecast.svg?branch=master)](https://travis-ci.org/barakmich/gochromecast)
 
 ## Description
 
@@ -12,7 +12,7 @@ Library for using chromecast. Contains partial implementations for media player 
 ## Usage
 
 To install the library, run
-`go get github.com/AndreasAbdi/gochromecast`
+`go get github.com/barakmich/gochromecast`
 
 ## Examples
 
@@ -22,7 +22,7 @@ package main
 
 import (
 "time"
-"github.com/AndreasAbdi/gochromecast"
+"github.com/barakmich/gochromecast"
 )
 
 func main() {
@@ -37,7 +37,7 @@ func main() {
 }
 ```
 
-For more examples of how to use it, see the [examples folder](https://github.com/AndreasAbdi/gochromecast/tree/master/examples).
+For more examples of how to use it, see the [examples folder](https://github.com/barakmich/gochromecast/tree/master/examples).
 
 ## References
 

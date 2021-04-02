@@ -2,10 +2,11 @@ package youtube
 
 import (
 	"errors"
+	"fmt"
 	"net/url"
 	"regexp"
 
-	"github.com/AndreasAbdi/gochromecast/generic"
+	"github.com/barakmich/gochromecast/generic"
 	"github.com/imroc/req"
 )
 
@@ -30,7 +31,7 @@ var bindData = map[string][]string{
 	"device":       {defaultDeviceType},
 	"id":           {defaultDeviceID},
 	"name":         {defaultDeviceID},
-	"mdx-version":  {string(3)},
+	"mdx-version":  {fmt.Sprint(3)},
 	"pairing_type": {bindPairingType},
 	"app":          {defaultAppName},
 }

@@ -1,7 +1,7 @@
 package youtube
 
 import (
-	"github.com/AndreasAbdi/gochromecast/primitives"
+	"github.com/barakmich/gochromecast/primitives"
 )
 
 //ScreenStatus is returned status of the youtube chromecast channel.
